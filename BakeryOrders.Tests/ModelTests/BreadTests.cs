@@ -29,5 +29,13 @@ namespace BakeryOrders.Models
       newLoaves.getPrice();
       Assert.AreEqual(5, newLoaves.Price);
     }
+    [TestMethod]
+    public void CheckPrice_CalculatesPriceWithBulkDiscount_Double()
+    {
+      int breadQty = 6;
+      Bread newLoaves = new Bread(breadQty);
+      newLoaves.getPrice();
+      Assert.AreEqual(20, newLoaves.Price);
+    }
   }
 }
