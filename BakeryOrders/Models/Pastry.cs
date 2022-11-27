@@ -10,7 +10,7 @@ namespace BakeryOrders.Models
     }
     public void getPrice()
     {
-      this.Price = this.PastryQuantity * 2;
+      this.Price = ((this.PastryQuantity/3) * 5) + (this.PastryQuantity%3)*2;
     }
   }
 }
