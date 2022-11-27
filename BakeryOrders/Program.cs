@@ -10,7 +10,12 @@ namespace BakeryOrders
       Program.WelcomeMessage();
       int breadOrder = Program.OrderCollection("loaves of bread");
       int pastryOrder = Program.OrderCollection("pastries");
+      Bread userBreadOrder = new Bread(breadOrder);
+      Pastry userPastryOrder = new Pastry(pastryOrder);
+      userBreadOrder.getPrice();
+      userPastryOrder.getPrice();
       Console.WriteLine($"You've ordered {breadOrder} loaves of bread and {pastryOrder} pastries.");
+      Console.WriteLine($"Your bread totaled ${userBreadOrder.Price} and your pastries totaled ${userPastryOrder.Price} for a grand total of ${userBreadOrder.Price + userPastryOrder.Price}");
     }
     public static int OrderCollection(string productType)
     {
