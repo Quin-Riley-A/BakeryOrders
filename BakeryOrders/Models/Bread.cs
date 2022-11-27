@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+using System;
 
 namespace BakeryOrders.Models
 {
@@ -12,7 +12,7 @@ namespace BakeryOrders.Models
     }
     public void getPrice()
     {
-      Price = this.BreadQuantity * 5;
+      Price = ((this.BreadQuantity/3) * 10) + (this.BreadQuantity%3)*5;
     }
   }
 }
