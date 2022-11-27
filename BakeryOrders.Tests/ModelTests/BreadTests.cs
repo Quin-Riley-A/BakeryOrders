@@ -19,7 +19,15 @@ namespace BakeryOrders.Models
       int breadQty = 2;
       Bread newLoaves = new Bread(breadQty);
       int breadCount = newLoaves.BreadQuantity;
-      Assert.AreEqual(breadCount, breadQty);
+      Assert.AreEqual(breadQty, breadCount);
+    }
+    [TestMethod]
+    public void CheckPrice_CalculatesPriceForBreadQty_Double()
+    {
+      int breadQty = 1;
+      Bread newLoaves = new Bread(breadQty);
+      newLoaves.getPrice();
+      Assert.AreEqual(5, newLoaves.Price);
     }
   }
 }
