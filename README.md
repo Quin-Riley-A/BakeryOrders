@@ -8,10 +8,10 @@ Quin Asselin, November 2022
 ***
 
 ## Table of Contents
-1. [Repository Description](#description)
-2. [Technologies Used](#tech)
-3. [Setup Instructions](#setup)
-4. [Known Bugs](#bugs)
+1. [Repository Description](#repository-description)
+2. [Technologies Used](#technologies-used)
+3. [Setup Instructions](#setup-installation-requirements)
+4. [Known Bugs](#known-bugs)
 5. [License Information](#license)
 
 *** 
@@ -32,7 +32,7 @@ This project was hand-built in tandem with a programming class taught by Epicodu
 
 ## Description
 
-## Setup/Installation Requirements
+## Setup Installation Requirements
 
 * _This is a great place_
 * _to list setup instructions_
