@@ -8,6 +8,9 @@ namespace BakeryOrders.Models
     {
       PastryQuantity = pastryQty;
     }
-
+    public void getPrice()
+    {
+      this.Price = this.PastryQuantity * 2;
+    }
   }
 }
