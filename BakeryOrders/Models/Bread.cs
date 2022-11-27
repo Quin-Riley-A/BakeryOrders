@@ -1,5 +1,3 @@
-using System;
-
 namespace BakeryOrders.Models
 {
   public class Bread
