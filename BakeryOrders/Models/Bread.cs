@@ -10,5 +10,9 @@ namespace BakeryOrders.Models
     {
       BreadQuantity = quantity;
     }
+    public void getPrice()
+    {
+      Price = this.BreadQuantity * 5;
+    }
   }
 }
