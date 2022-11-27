@@ -16,112 +16,71 @@ Quin Asselin, November 2022
 
 *** 
 
-###Repository Description:
-This project written and compiled in C-Sharp will initially welcome the user to an instance of Pierre's Bakery in the terminal. From there, the user will 
+## Repository Description:
+This project written and compiled in C-Sharp will initially welcome the user to an instance of Pierre's Bakery in the terminal. From there, the user will be prompted to select their desired quantity of the two goods Pierre has on offer. Afterwards, the terminal will display the price of the breads, the price of the pastries, and a total price for all items including any relevant discounts mentioned in the welcome message.
 
-This project was hand-built in tandem with a programming class taught by Epicodus. It contains use of JavaScript, HTML, and formatting from both custom CSS and Bootstrap. 
-
+This project was hand-built in tandem with a programming class taught by Epicodus. It contains use of C-Sharp, .NET, and Markdown. This project also uses Text To ASCII Art Generator linked below along with licensing information.
 ***
 
 ## Technologies Used
 
 - C#
+- .NET
 - Git
 - Github
 - Markdown
+- Text To ASCII Art Generator (TAAG)
 
-## Description
+***
 
 ## Setup Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+1. Download this repository from its Github Repository located [here.](https://github.com/Quin-Riley-A/BakeryOrders)
+2. Open the folder titled "BakeryOrders.Solutions"
+3. Unzip the downloaded folder if necessary.
+4. Verify this directory contains all of the following:
+  - BakeryOrders folder:
+    -  Models folder:
+      - Bread.cs
+      - Pastry.cs
+    - BakeryOrders.csproj
+    - Program.cs
+  - BakeryOrders.Tests folder:
+    - ModelTests
+      -BreadTests.cs
+      PastryTests.cs
+    - BakeryOrders.Tests.csproj
+  - .gitignore
+  - LICENSE
+  - README.md
+5. In the terminal navigate to within the "BakeryOrders.Tests" folder.
+6. Run the following command in bash or an equivalent from within this directory:
+```bash
+dotnet restore
+```
+You should receive a message stating 
+```bash
+"All projects are up-to-date for restore"
+```
+7. Within the bash terminal afterwards navigate from the "BakeryOrders.Tests" folder to the "BakeryOrders" folder
+8. Run the following command: 
+```bash
+dotnet build
+```
+9. After the sucessful completion of the previous command, the following command will start an instance of the program
+```bash
+dotnet run
+```
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* This program may experience issues of formatting to the welcome message when opening in the terminal. If the terminal is not of sufficient width, the initial message will not print properly.
+  * If the welcome message appears poorly formatted try increasing the width of the terminal until each line can fully print within th confines of the terminal window.
+* Some care has gone into ensuring that the user input is verified to be of the correct format before allowing the continuation of the program. As such, if any novel errors are found while making entries to the order form, please record the input that produced the error.
+* If you experience any of these issues, please message the producer of your current repository and include any relevant form/page information. Thank you for your patience as I work on any issues!
+
 
 ## License
 *Quin Asselin, 2022. Available for distribution, modification, inspection, and application under [GPLv3 License](https://www.gnu.org/licenses/gpl-3.0.en.html)*
 
-
-
-### Setup Instructions: {#setup}
-This project can be opened via cloning/downloading repository:
-1. Download this repository from its Github Repository located [here.](https://github.com/Quin-Riley-A/currency-exchanger)
-2. Locate the download destination folder on your local machine.
-3. Unzip the downloaded folder if necessary.
-4. Ensure all files are present from your download folder, namely:
-- src folder:
-  - css folder:
-    - bootstrap.css
-    - styles.css
-  - utility folder:
-    - currencyConvert.js
-    - exchangeAPI.js
-    - populateFormSelect.js
-  - index.html
-  - index.js
-- .babelrc
-- .eslintrc
-- .gitignore
-- package-lock.json
-- package.json
-- LICENSE
-- README.md
-- webpack.config.js
-
-5. To allow this program to properly function, you will need to add your own exchange rate API key which can be done as follows:
-  - Navigate to [exchangerate-api.com](https://www.exchangerate-api.com/)
-  - Click on "Get Free Key" in the top left corner
-  - Sign up for a free account using your preferred email and a password
-  - Check your preferred email (first main, then spam if necessary) for a verification email activation link.
-  - When you click this link, if it does not immediately take you to a page with "Your API Key" then follow this [link](https://app.exchangerate-api.com/dashboard) after successfully activating your account. Sign in as necessary.
-  - On the dashboard page copy the bold faced API Key. It should look like a random series of letters and numbers
-  - Return to the currency-exchanger working environment.
-  - Create a file called '.env' in the root directory as a sibling to this 'README.md' (the quotes are not necessary).
-  - Edit the text of that file in a program such as VSCode to read as follows:
-  ```code
-  API_KEY=[your key from the exchange rate API dashboard]
-  ```
-  - (The key itself does not need to be wrapped in brackets or quotes etc.)
-
-6. Navigate to your decompressed download destination folder within the terminal and run the following command to install dependencies:
-```bash
-npm install
-```
-
-7. Following this, use the following command to generate a bundled package containing the working html file:
-```bash
-npm run build
-```
-
-8. Next, to set up a development server, within the same directory run the following command in your terminal:
-```bash
-npm run start
-```
-
-9. Alternatively to step 7: After step 6 is successfully completed, navigate to the dist folder within the root directory and open the index.html file in your preferred web browser.
-  * Note that by opening the program directly from the dist/index.html no changes made to the code while the webpage is opened will be registered. To register the effects of changes on the browser steps 7 and 9 will need to be repeated.
-
-***
-
-### Known Bugs: {#bugs}
-In the event that disallowed values are entered into the form, or the API request URL is adjusted the program may return an error message in place of the intended conversion result.
-
-The program is limited by the total number of API calls the service will allow a user to submit over the course of a month. In the event the user would like more they'll have to explore additional options from within the API.
-
-Lastly, the program rounds currency conversions down to the next hundredth of a unit. That is to say for currencies that include denominations divided out to the thousandth the exchange rate and will have a diminished accuracy with regard to the number of milles.
-
- If you experience any of these issues, please message the producer of your current repository and include any relevant form/page information. Thank you for your patience as I work on any issues!
-
-The page may experience formatting issues when opened on mobile devices or tablets/laptops in smaller windows. Page should still be legible but general project layout will shift in potentially unforeseen manner. Thus, it is recommended to open the HTML index page in browser or file explorer in as full a screen as hardware allows.
-
-***
-
-### License Information {#license}
-*Quin Asselin, 2022. Available for distribution, modification, inspection, and application under [GPLv3 License](https://www.gnu.org/licenses/gpl-3.0.en.html)*
+This application makes use of the DOOM font by Frans P. de Vries (18 June, 1996) which can be found [here](https://patorjk.com/software/taag/#p=display&f=Doom), along with more information regarding sourcing and licensing. 
