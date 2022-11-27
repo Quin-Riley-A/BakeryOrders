@@ -7,6 +7,10 @@ namespace BakeryOrders
   {
     public static void Main()
     {
+      Program.WelcomeMessage();
+    }
+    public static void WelcomeMessage()
+    {
       Console.WriteLine(@"______ _                    _      ______       _                   ");
       Console.WriteLine(@"| ___ (_)                  ( )     | ___ \     | |                  ");
       Console.WriteLine(@"| |_/ /_  ___ _ __ _ __ ___|/ ___  | |_/ / __ _| | _____ _ __ _   _ ");
